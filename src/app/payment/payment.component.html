@@ -1,0 +1,94 @@
+<div class="container" style="margin-top: 47px;">
+   <div class="row justify-content-center">
+      <div class="col-sm-6 col-md-6 col-lg-6">
+         <div class="card">
+            <div class="card-body">
+               <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6 mb-2">
+                     <h5>Payment Details</h5>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-6" style="text-align: end;">
+                     <img
+                        src="../assets/image/payment.png"
+                        alt="payment"
+                        style="width: 200px;"
+                        />
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                     <form [formGroup]="subscribeForm"   name="subscribeForm" (ngSubmit)="subscribe()" autocomplete="off">
+                     <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input
+                           type="email"
+                           formControlName="email"
+                           class="form-control"
+                           name = "email"
+                           id="exampleInputEmail1"
+                           aria-describedby="emailHelp"
+                           placeholder="Enter email"
+                           [ngClass]="{'is-invalid':subscribeForm.get('email').touched && subscribeForm.get('email').invalid}" required 
+                           />
+                        <div class="invalid-feedback">
+                           <small id="emailHelp"  class="form-text text-muted" style="color: #ef1f45!important;">Email id Required</small>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="card-number">Card Number</label
+                           ><span style="color: red;" class="mandatory">*</span>
+                        <div
+                           id="cardNumberElement"
+                           #cardNumberElement
+                           class="form-group"
+                           ></div>
+                     </div>
+                     <div class="form-group">
+                        <label for="card-expiry">Expiry</label
+                           ><span style="color: red;" class="mandatory">*</span>
+                        <div
+                           id="cardExpiryElement"
+                           #cardExpiryElement
+                           class="form-group"
+                           ></div>
+                     </div>
+                     <div class="form-group">
+                        <label for="card-cvc">CVC</label
+                           ><span style="color: red;" class="mandatory">*</span>
+                        <div
+                           id="cardCVCElement"
+                           #cardCVCElement
+                           class="form-group"
+                           ></div>
+                     </div>
+                     <div class="form-group">
+                        <label class="form-check-label"
+                           >I agree to the <a href="">License Terms</a> and
+                        <a href="">User Terms</a>
+                        </label>
+                        <input
+                           type="checkbox"
+                           class="form-check-input"
+                           id="exampleCheck1"
+                           name="agree"
+                           formControlName="agree"
+                           [ngClass]="{'is-invalid':subscribeForm.get('agree').touched && subscribeForm.get('agree').invalid}" required 
+                           style="position: absolute;
+                           margin-top: 6px;
+                           margin-left: 10px;"
+                           />
+                        <div class="invalid-feedback">
+                           <small id="emailHelp"  class="form-text text-muted" style="color: #ef1f45!important;">Please select checkbox </small>
+                        </div>
+                     </div>
+                     <button  [disabled]="isFormDisabled()" type="submit" class="btn btn-primary">
+                     Pay $40.00
+                     </button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

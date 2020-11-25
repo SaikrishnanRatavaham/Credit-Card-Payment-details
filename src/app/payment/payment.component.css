@@ -1,0 +1,32 @@
+.StripeElement {
+  border: 1.5px solid #ced4da;
+  padding: 0.6rem 0.5rem;
+  border-radius: 4px !important;
+  font-size: 0.9rem;
+}
+
+/* .StripeElement--focus {
+        box-shadow: 0 1px 3px 0 #cfd7df;
+    } */
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 15px, rgba(0, 0, 0, 0.04) 0px 1px 6px;
+  border: initial;
+  background: white;
+}
+
+.card .card-body {
+  padding: 1.75rem;
+}
+
+.rounded .card {
+  border-radius: 0.75rem;
+}
